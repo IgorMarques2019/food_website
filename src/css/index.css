@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Raleway";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+header {
+  background: #fff;
+}
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+header .container h2 {
+  color: #fb8a22;
+  display: flex;
+  gap: 10px;
+}
+header .container h2 span {
+  font-weight: 700;
+  color: #22262a;
+  display: none;
+}
+header .container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: #fb8a22;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 3;
+  padding: 30px;
+  transition: all 1s;
+}
+header .container ul li {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 1s 0.5s;
+}
+header .container ul li a {
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  transition: opacity 0.5s;
+  text-align: center;
+  width: 100%;
+}
+header .container ul li.active::before {
+  display: none;
+}
+header .container ul li:hover {
+  border: 1px solid white;
+}
+header .container ul a {
+  opacity: 0;
+  transition: opacity 2s 1s;
+}
+header .container ul.menu-active {
+  left: 0;
+  border-radius: 0;
+}
+header .container ul.menu-active li {
+  opacity: 1;
+}
+header .container ul.menu-active a {
+  opacity: 1;
+}
+header .container ul #contact-link {
+  background: #793c03;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+header .container .cart-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .container .cart-area .cart--box i {
+  color: #22262a;
+  font-size: 28px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+header .container .cart-area .cart--box i span {
+  font-size: 14px;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  aspect-ratio: 1/1;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+header .container .cart-area #contact-link {
+  padding: 10px;
+  background-color: #fb8a22;
+  color: white;
+  border-radius: 4px;
+}
+header .container .cart-area #mobile-menu {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background: #fff;
+  }
+  header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+  header .container h2 {
+    color: #fb8a22;
+    display: flex;
+    gap: 10px;
+  }
+  header .container h2 span {
+    font-weight: 700;
+    color: #22262a;
+    display: block;
+  }
+  header .container ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: initial;
+    background: none;
+    left: 0;
+    top: 0;
+    gap: 20px;
+    width: initial;
+    border-radius: 0;
+  }
+  header .container ul li {
+    opacity: 1;
+    position: relative;
+    padding: 10px;
+  }
+  header .container ul li a {
+    color: #6d6d6d;
+    font-weight: 600;
+    display: inline-block;
+    opacity: 1;
+  }
+  header .container ul li.active::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    background: #fb8a22;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  header .container ul li:hover a {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  header .container ul li:hover {
+    border: none;
+  }
+  header .container a {
+    opacity: 1;
+  }
+  header .container .cart-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  header .container .cart-area .cart--box i {
+    color: #22262a;
+    font-size: 28px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  header .container .cart-area .cart--box i span {
+    font-size: 14px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    aspect-ratio: 1/1;
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+  header .container .cart-area #contact-link {
+    padding: 10px;
+    background-color: #fb8a22;
+    color: white;
+    border-radius: 4px;
+  }
+  header .container .cart-area #mobile-menu {
+    display: none;
+  }
+}
+#banner-principal {
+  width: 100%;
+  background: #fff url("/src/img/hand-holding-fresh-red-tomato-marble-background.png") no-repeat bottom 100px left -30px;
+  background-size: 160px;
+  padding: 30px;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+}
+#banner-principal #banner-cta {
+  grid-column: 2/7;
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0px;
+  grid-template-columns: repeat(12, 1fr);
+}
+#banner-principal #banner-cta .banner-text {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#banner-principal #banner-cta .banner-text span {
+  padding: 10px;
+  border-radius: 20px;
+  color: #793c03;
+  background-color: #fde9d6;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  align-self: start;
+}
+#banner-principal #banner-cta .banner-text h1 {
+  grid-column: 1/-1;
+  max-width: 15ch;
+  font-size: 64px;
+  color: #22262a;
+  line-height: 1.5;
+  font-size: 36px;
+}
+#banner-principal #banner-cta .footer-cta {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column: 1/-1;
+  gap: 20px;
+}
+#banner-principal #banner-cta .footer-cta p {
+  grid-column: 1/-1;
+  font-size: 16px;
+}
+#banner-principal #banner-cta .footer-cta button {
+  border: 2px solid #fb8a22;
+  padding: 10px;
+  grid-column: 1/7;
+  border-radius: 30px;
+  background-color: #fb8a22;
+  color: #fde9d6;
+}
+#banner-principal img {
+  grid-column: 7/-1;
+  animation: animateBurguer 1.75s linear infinite alternate;
+}
+
+@media screen and (min-width: 768px) {
+  #banner-principal {
+    background: #fff url("/src/img/hand-holding-fresh-red-tomato-marble-background.png") no-repeat bottom 100px left -30px;
+    background-size: 160px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+  #banner-principal #banner-cta {
+    grid-column: 2/7;
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #banner-principal #banner-cta .banner-text {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  #banner-principal #banner-cta .banner-text span {
+    padding: 10px;
+    border-radius: 20px;
+    color: #793c03;
+    background-color: #fde9d6;
+    display: inline-block;
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 12px;
+  }
+  #banner-principal #banner-cta .banner-text h1 {
+    grid-column: 1/-1;
+    max-width: 15ch;
+    font-size: 64px;
+    color: #22262a;
+    line-height: 1.5;
+    font-size: 36px;
+  }
+  #banner-principal #banner-cta .footer-cta {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1/-1;
+    gap: 20px;
+  }
+  #banner-principal #banner-cta .footer-cta p {
+    grid-column: 1/-1;
+    font-size: 16px;
+  }
+  #banner-principal #banner-cta .footer-cta button {
+    border: 2px solid #fb8a22;
+    padding: 10px;
+    grid-column: 1/7;
+    border-radius: 30px;
+    background-color: #fb8a22;
+    color: #fde9d6;
+  }
+  #banner-principal img {
+    grid-column: 7/-1;
+    animation: animateBurguer 1.75s linear infinite alternate;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #banner-principal {
+    background: #fff url("/src/img/hand-holding-fresh-red-tomato-marble-background.png") no-repeat bottom 0px left -30px;
+    background-size: 250px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+  #banner-principal #banner-cta {
+    grid-column: 2/7;
+    display: grid;
+    gap: 50px 0px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #banner-principal #banner-cta .banner-text {
+    grid-column: 1/-1;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #banner-principal #banner-cta .banner-text span {
+    padding: 10px;
+    border-radius: 20px;
+    color: #793c03;
+    background-color: #fde9d6;
+    display: inline-block;
+    grid-column: 1/7;
+    text-align: center;
+  }
+  #banner-principal #banner-cta .banner-text h1 {
+    grid-column: 1/-1;
+    max-width: 15ch;
+    font-size: 64px;
+    color: #22262a;
+    line-height: 1.5;
+  }
+  #banner-principal #banner-cta .footer-cta {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1/-1;
+    gap: 20px;
+  }
+  #banner-principal #banner-cta .footer-cta p {
+    grid-column: 1/-1;
+    font-size: 20px;
+  }
+  #banner-principal #banner-cta .footer-cta button {
+    border: 2px solid #fb8a22;
+    padding: 10px;
+    grid-column: 1/7;
+    border-radius: 30px;
+    background-color: #fb8a22;
+    color: #fde9d6;
+  }
+  #banner-principal img {
+    grid-column: 7/-1;
+    animation: animateBurguer 1.75s linear infinite alternate;
+  }
+}
+@keyframes animateBurguer {
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=index.css.map */

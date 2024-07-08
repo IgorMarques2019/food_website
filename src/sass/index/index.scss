@@ -1,0 +1,224 @@
+@import "../global/global";
+
+@import "header";
+
+
+
+#banner-principal {
+  width: 100%;
+  background: #fff
+    url("/src/img/hand-holding-fresh-red-tomato-marble-background.png")
+    no-repeat bottom 100px left -30px;
+  background-size: 160px;
+  padding: 30px;
+
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+
+  #banner-cta {
+    grid-column: 2/7;
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0px;
+    grid-template-columns: repeat(12, 1fr);
+    .banner-text {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      span {
+        padding: 10px;
+        border-radius: 20px;
+        color: $orange-dark;
+        background-color: $orange-light;
+        display: inline-block;
+        text-align: center;
+        font-size: 12px;
+        align-self: start;
+      }
+      h1 {
+        grid-column: 1/-1;
+        max-width: 15ch;
+        font-size: 64px;
+        color: $dgMetal;
+        line-height: 1.5;
+        font-size: 36px;
+      }
+    }
+
+    .footer-cta {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column: 1/-1;
+      gap: 20px;
+      p {
+        grid-column: 1/-1;
+        font-size: 16px;
+      }
+
+      button {
+        border: 2px solid $orange;
+        padding: 10px;
+        grid-column: 1/7;
+        border-radius: 30px;
+        background-color: $orange;
+        color: $orange-light;
+      }
+    }
+  }
+
+  img {
+    grid-column: 7/-1;
+    animation: animateBurguer 1.75s linear infinite alternate;
+  }
+}
+
+//TABLET
+@media screen and (min-width: 768px) {
+  #banner-principal {
+    background: #fff
+      url("/src/img/hand-holding-fresh-red-tomato-marble-background.png")
+      no-repeat bottom 100px left -30px;
+    background-size: 160px;
+
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+
+    #banner-cta {
+      grid-column: 2/7;
+      display: flex;
+      flex-direction: column;
+      gap: 25px 0px;
+      grid-template-columns: repeat(12, 1fr);
+      .banner-text {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        span {
+          padding: 10px;
+          border-radius: 20px;
+          color: $orange-dark;
+          background-color: $orange-light;
+          display: inline-block;
+          grid-column: 1/-1;
+          text-align: center;
+          font-size: 12px;
+        }
+        h1 {
+          grid-column: 1/-1;
+          max-width: 15ch;
+          font-size: 64px;
+          color: $dgMetal;
+          line-height: 1.5;
+          font-size: 36px;
+        }
+      }
+
+      .footer-cta {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column: 1/-1;
+        gap: 20px;
+        p {
+          grid-column: 1/-1;
+          font-size: 16px;
+        }
+
+        button {
+          border: 2px solid $orange;
+          padding: 10px;
+          grid-column: 1/7;
+          border-radius: 30px;
+          background-color: $orange;
+          color: $orange-light;
+        }
+      }
+    }
+
+    img {
+      grid-column: 7/-1;
+      animation: animateBurguer 1.75s linear infinite alternate;
+    }
+  }
+}
+
+// DESKTOP
+@media screen and (min-width: 1024px) {
+  #banner-principal {
+    background: #fff
+      url("/src/img/hand-holding-fresh-red-tomato-marble-background.png")
+      no-repeat bottom 0px left -30px;
+    background-size: 250px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+
+    #banner-cta {
+      grid-column: 2/7;
+      display: grid;
+      gap: 50px 0px;
+      grid-template-columns: repeat(12, 1fr);
+      .banner-text {
+        grid-column: 1/-1;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        span {
+          padding: 10px;
+          border-radius: 20px;
+          color: $orange-dark;
+          background-color: $orange-light;
+          display: inline-block;
+          grid-column: 1/7;
+          text-align: center;
+        }
+        h1 {
+          grid-column: 1/-1;
+          max-width: 15ch;
+          font-size: 64px;
+          color: $dgMetal;
+          line-height: 1.5;
+        }
+      }
+
+      .footer-cta {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column: 1/-1;
+        gap: 20px;
+        p {
+          grid-column: 1/-1;
+          font-size: 20px;
+        }
+
+        button {
+          border: 2px solid $orange;
+          padding: 10px;
+          grid-column: 1/7;
+          border-radius: 30px;
+          background-color: $orange;
+          color: $orange-light;
+        }
+      }
+    }
+
+    img {
+      grid-column: 7/-1;
+      animation: animateBurguer 1.75s linear infinite alternate;
+    }
+  }
+}
+
+@keyframes animateBurguer {
+  from {
+    transform: translateY(-15px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}

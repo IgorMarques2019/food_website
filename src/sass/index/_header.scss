@@ -1,0 +1,244 @@
+header {
+  background: $white;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    h2 {
+      color: $orange;
+      display: flex;
+      gap: 10px;
+      span {
+        font-weight: 700;
+        color: $dgMetal;
+        display: none;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      border-radius: 100%;
+      overflow: hidden;
+
+      background-color: $orange;
+
+      width: 100%;
+      height: 100vh;
+
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 3;
+
+      padding: 30px;
+      transition: all 1s;
+
+      li {
+        width: 100%;
+        position: relative;
+        padding: 10px;
+        opacity:0;
+        transition:opacity 1s .5s;
+        a {
+          color: #fff;
+          font-weight: 600;
+          display: inline-block;
+          transition: opacity 0.5s;
+          text-align: center;
+          width: 100%;
+        }
+
+        &.active::before {
+          display: none;
+        }
+        &:hover {
+          border: 1px solid white;
+        }
+      }
+
+      a {
+        opacity:0;
+        transition:opacity 2s 1s;
+      }
+
+      &.menu-active {
+        left: 0;
+        border-radius: 0;
+        li {
+          opacity:1;
+        }
+        a {
+          opacity:1;
+        }
+      }
+      #contact-link {
+        background: $orange-dark;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+
+    .cart-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .cart--box {
+        i {
+          color: $dgMetal;
+          font-size: 28px;
+          position: relative;
+          top: 0;
+          left: 0;
+          span {
+            font-size: 14px;
+            background-color: red;
+            color: rgb(255, 255, 255);
+            aspect-ratio: 1/1;
+            padding: 2px 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+          }
+        }
+      }
+
+      #contact-link {
+        padding: 10px;
+        background-color: $orange;
+        color: white;
+        border-radius: 4px;
+      }
+      #mobile-menu {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+//TABLET
+@media screen and (min-width: 768px) {
+  header {
+    background: $white;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      h2 {
+        color: $orange;
+        display: flex;
+        gap: 10px;
+        span {
+          font-weight: 700;
+          color: $dgMetal;
+          display: block;
+        }
+      }
+      ul {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: initial;
+        background: none;
+        left: 0;
+        top: 0;
+        gap: 20px;
+        width: initial;
+        border-radius:0;
+        li {
+          opacity:1;
+          position: relative;
+          padding: 10px;
+          a {
+            color: #6d6d6d;
+            font-weight: 600;
+            display: inline-block;
+            opacity:1;
+          }
+
+          &.active::before {
+            content: "";
+            width: 100%;
+            height: 4px;
+            display: block;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            background: $orange;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+          }
+          &:hover a {
+            opacity: 0.5;
+            cursor: pointer;
+          }
+
+          &:hover {
+            border: none;
+          }
+        }
+
+        
+      }
+      a {
+        opacity:1;
+      }
+
+      .cart-area {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .cart--box {
+          i {
+            color: $dgMetal;
+            font-size: 28px;
+            position: relative;
+            top: 0;
+            left: 0;
+            span {
+              font-size: 14px;
+              background-color: red;
+              color: rgb(255, 255, 255);
+              aspect-ratio: 1/1;
+              padding: 2px 4px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              position: absolute;
+              top: -5px;
+              right: -5px;
+            }
+          }
+        }
+
+        #contact-link {
+          padding: 10px;
+          background-color: $orange;
+          color: white;
+          border-radius: 4px;
+        }
+
+        #mobile-menu {
+          display: none;
+        }
+      }
+    }
+  }
+}
