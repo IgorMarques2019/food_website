@@ -244,7 +244,7 @@ header .container .cart-area #mobile-menu {
 }
 #banner-principal {
   width: 100%;
-  background: #fff url("/src/img/hand-holding-fresh-red-tomato-marble-background.png") no-repeat bottom 100px left -30px;
+  background: #fff url("../img/orange.png") no-repeat bottom 100px left -30px;
   background-size: 160px;
   padding: 30px;
   margin-top: 60px;
@@ -307,7 +307,7 @@ header .container .cart-area #mobile-menu {
 
 @media screen and (min-width: 768px) {
   #banner-principal {
-    background: #fff url("/src/img/hand-holding-fresh-red-tomato-marble-background.png") no-repeat bottom 100px left -30px;
+    background: #fff url("../img/orange.png") no-repeat bottom 100px left -30px;
     background-size: 160px;
     margin-top: 60px;
     display: grid;
@@ -369,7 +369,7 @@ header .container .cart-area #mobile-menu {
 }
 @media screen and (min-width: 1024px) {
   #banner-principal {
-    background: #fff url("/src/img/hand-holding-fresh-red-tomato-marble-background.png") no-repeat bottom 0px left -30px;
+    background: #fff url("../img/orange.png") no-repeat bottom 0px left -30px;
     background-size: 250px;
     margin-top: 0px;
     display: grid;
